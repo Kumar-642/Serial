@@ -1,3 +1,9 @@
+# Example : Let we have a water container of 1000gm and water flows out continously. We want to find the average amount of use of water 
+#           in 5 sec and want to predict the total amount time required to empty whole container.So, here we take only 100 reading.
+
+# This is small example but we can use same pricipal for large application by changing some parameter
+
+
 import serial     # Importing Serial Library (this library does not work on Google collab)
 
 # importing necessary library
@@ -20,9 +26,9 @@ for i in range(11):
     print('waiting:',timer)
 weights = []
 i = 0
-data_points = int(input('Enter Number of Data Points'))
+data_points = int(input('Enter Number of Data Points'))  # for this example we need only 100 data points
 while i<data_points+1:
-    # time.sleep(10)
+    # time.sleep(5)      # after every 5 seconds, it read weight of container
     ser = serial.Serial(port='/dev/cu.usbmodem1301',baudrate=57600)
     value=ser.readline()
     value = str(value,'UTF-8')
