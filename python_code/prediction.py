@@ -1,4 +1,4 @@
-from joblib import load    # We already dump our model on joblib file, whenever we require we call it .
+from joblib import load    # We already dump our linear regression model on joblib file, whenever we require we call it .
 
 def prediction():
   print('model can predict in range of 0 - 1000 ml')
