@@ -35,4 +35,4 @@ Sequence =range(1,data_points+1)
 ser.close()
 df = pd.DataFrame({'Sequence':Sequence,'Current weights':weights})
 print(df)
-df.to_excel('Final_test.xlsx')
+df.to_excel('Final_test.xlsx')   # Data get saved in Excel file.
